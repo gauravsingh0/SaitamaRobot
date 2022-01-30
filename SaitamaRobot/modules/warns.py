@@ -3,24 +3,24 @@ import re
 from typing import Optional
 
 import telegram
-from SaitamaRobot import TIGERS, WOLVES, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SparrowRobot import TIGERS, WOLVES, dispatcher
+from SparrowRobot.modules.disable import DisableAbleCommandHandler
+from SparrowRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
     user_admin_no_reply)
-from SaitamaRobot.modules.helper_funcs.extraction import (
+from SparrowRobot.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
-from SaitamaRobot.modules.helper_funcs.misc import split_message
-from SaitamaRobot.modules.helper_funcs.string_handling import split_quotes
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql import warns_sql as sql
+from SparrowRobot.modules.helper_funcs.filters import CustomFilters
+from SparrowRobot.modules.helper_funcs.misc import split_message
+from SparrowRobot.modules.helper_funcs.string_handling import split_quotes
+from SparrowRobot.modules.log_channel import loggable
+from SparrowRobot.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -499,18 +499,18 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- • `/warns <userhandle>`*:* get a user's number, and reason, of warns.
- • `/warnlist`*:* list of all current warning filters
+ ◑ `/warns <userhandle>`*:* get a user's number, and reason, of warns.
+ ◑ `/warnlist`*:* list of all current warning filters
 
 *Admins only:*
- • `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
- • `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
+ ◑ `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+ ◑ `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+ ◑ `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
+ ◑ `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
 be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`.
- • `/nowarn <keyword>`*:* stop a warning filter
- • `/warnlimit <num>`*:* set the warning limit
- • `/strongwarn <on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
+ ◑ `/nowarn <keyword>`*:* stop a warning filter
+ ◑ `/warnlimit <num>`*:* set the warning limit
+ ◑ `/strongwarn <on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
 __mod_name__ = "Warnings"
