@@ -1,5 +1,5 @@
 import wikipedia
-from SparrowRobot import dispatcher
+ SparrowRobot import dispatcher
 from SparrowRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
