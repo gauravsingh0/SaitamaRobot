@@ -1,16 +1,16 @@
 # Config files, logs and stuff
-SaitamaRobot/modules/helper_funcs/temp.txt
-SaitamaRobot/elevated_users.json
-SaitamaRobot/config.py
-SaitamaRobot/config.ini
+SparrowRobot/modules/helper_funcs/temp.txt
+SparrowRobot/elevated_users.json
+SparrowRobot/config.py
+SparrowRobot/config.ini
 log.txt
 kangsticker.png
 updates.txt
 start_service.bat
 
 # Session files
-SaitamaRobot/*.session
-SaitamaRobot/*.session-journal
+SparrowRobot/*.session
+SparrowRobot/*.session-journal
 saitama.session-journal
 *.session
 
