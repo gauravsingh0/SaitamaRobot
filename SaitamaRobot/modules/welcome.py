@@ -5,9 +5,9 @@ import time
 from functools import partial
 from contextlib import suppress
 
-import SaitamaRobot.modules.sql.welcome_sql as sql
-import SaitamaRobot
-from SaitamaRobot import (
+import SparrowRobot.modules.sql.welcome_sql as sql
+import SparrowRobot
+from SparrowRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -19,18 +19,18 @@ from SaitamaRobot import (
     dispatcher,
     JOIN_LOGGER,
 )
-from SaitamaRobot.modules.helper_funcs.chat_status import (
+from SparrowRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from SaitamaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from SaitamaRobot.modules.helper_funcs.msg_types import get_welcome_type
-from SaitamaRobot.modules.helper_funcs.string_handling import (
+from SparrowRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from SparrowRobot.modules.helper_funcs.msg_types import get_welcome_type
+from SparrowRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql.global_bans_sql import is_user_gbanned
+from SparrowRobot.modules.log_channel import loggable
+from SparrowRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -1114,17 +1114,17 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 *Admins only:*
- • `/welcome <on/off>`*:* enable/disable welcome messages.
- • `/welcome`*:* shows current welcome settings.
- • `/welcome noformat`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- • `/goodbye`*:* same usage and args as `/welcome`.
- • `/setwelcome <sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
- • `/setgoodbye <sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
- • `/resetwelcome`*:* reset to the default welcome message.
- • `/resetgoodbye`*:* reset to the default goodbye message.
- • `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
- • `/welcomemutehelp`*:* gives information about welcome mutes.
- • `/cleanservice <on/off`*:* deletes telegrams welcome/left service messages.
+ ◑ `/welcome <on/off>`*:* enable/disable welcome messages.
+ ◑ `/welcome`*:* shows current welcome settings.
+ ◑ `/welcome noformat`*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
+ ◑ `/goodbye`*:* same usage and args as `/welcome`.
+ ◑ `/setwelcome <sometext>`*:* set a custom welcome message. If used replying to media, uses that media.
+ ◑ `/setgoodbye <sometext>`*:* set a custom goodbye message. If used replying to media, uses that media.
+ ◑ `/resetwelcome`*:* reset to the default welcome message.
+ ◑ `/resetgoodbye`*:* reset to the default goodbye message.
+ ◑ `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
+ ◑ `/welcomemutehelp`*:* gives information about welcome mutes.
+ ◑ `/cleanservice <on/off`*:* deletes telegrams welcome/left service messages.
  *Example:*
 user joined chat, user left chat.
 
