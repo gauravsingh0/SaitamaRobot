@@ -2,9 +2,9 @@ import sre_constants
 
 import regex
 import telegram
-from SaitamaRobot import LOGGER, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleMessageHandler
-from SaitamaRobot.modules.helper_funcs.regex_helper import infinite_loop_check
+from SparrowRobot import LOGGER, dispatcher
+from SparrowRobot.modules.disable import DisableAbleMessageHandler
+from SparrowRobot.modules.helper_funcs.regex_helper import infinite_loop_check
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 
@@ -124,7 +124,7 @@ def sed(update: Update, context: CallbackContext):
 
 
 __help__ = """
- • `s/<text1>/<text2>(/<flag>)`*:* Reply to a message with this to perform a sed operation on that message, replacing all \
+◑ `s/<text1>/<text2>(/<flag>)`*:* Reply to a message with this to perform a sed operation on that message, replacing all \
 occurrences of 'text1' with 'text2'. Flags are optional, and currently include 'i' for ignore case, 'g' for global, \
 or nothing. Delimiters include `/`, `_`, `|`, and `:`. Text grouping is supported. The resulting message cannot be \
 larger than {}.
