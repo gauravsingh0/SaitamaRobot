@@ -1,7 +1,7 @@
 import speedtest
 from SaitamaRobot import DEV_USERS, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import dev_plus
+from SparrowRobot.modules.disable import DisableAbleCommandHandler
+from SparrowRobot.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
@@ -48,7 +48,7 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
             replymsg += f"\nDownload: `{convert(result['download'])}Mb/s`\nUpload: `{convert(result['upload'])}Mb/s`\nPing: `{result['ping']}`"
             update.effective_message.edit_text(replymsg, parse_mode=ParseMode.MARKDOWN)
     else:
-        query.answer("You are required to join Heroes Association to use this command.")
+        query.answer("You are required to join Gaurboo support to use this command.")
 
 
 SPEED_TEST_HANDLER = DisableAbleCommandHandler("speedtest", speedtestxyz)
