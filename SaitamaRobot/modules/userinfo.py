@@ -24,15 +24,15 @@ from SaitamaRobot import (
     dispatcher,
     sw,
 )
-from SaitamaRobot.__main__ import STATS, TOKEN, USER_INFO
-import SaitamaRobot.modules.sql.userinfo_sql as sql
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.sql.global_bans_sql import is_user_gbanned
-from SaitamaRobot.modules.sql.afk_sql import is_afk, check_afk_status
-from SaitamaRobot.modules.sql.users_sql import get_user_num_chats
-from SaitamaRobot.modules.helper_funcs.chat_status import sudo_plus
-from SaitamaRobot.modules.helper_funcs.extraction import extract_user
-from SaitamaRobot import telethn as SaitamaTelethonClient
+from SparrowRobot.__main__ import STATS, TOKEN, USER_INFO
+import SparrowRobot.modules.sql.userinfo_sql as sql
+from SparrowRobot.modules.disable import DisableAbleCommandHandler
+from SparrowRobot.modules.sql.global_bans_sql import is_user_gbanned
+from SparrowRobot.modules.sql.afk_sql import is_afk, check_afk_status
+from SparrowRobot.modules.sql.users_sql import get_user_num_chats
+from SparrowRobot.modules.helper_funcs.chat_status import sudo_plus
+from SparrowRobot.modules.helper_funcs.extraction import extract_user
+from SparrowRobot import telethn as SparrowTelethonClient
 
 
 def no_by_per(totalhp, percentage):
@@ -518,28 +518,28 @@ def __user_info__(user_id):
 
 __help__ = """
 *ID:*
- • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
- • `/gifid`*:* reply to a gif to me to tell you its file ID.
+ ◑ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
+ ◑ `/gifid`*:* reply to a gif to me to tell you its file ID.
 
 *Self addded information:*
- • `/setme <text>`*:* will set your info
- • `/me`*:* will get your or another user's info.
+ ◑ `/setme <text>`*:* will set your info
+ ◑ `/me`*:* will get your or another user's info.
 Examples:
  `/setme I am a wolf.`
  `/me @username(defaults to yours if no user specified)`
 
 *Information others add on you:*
- • `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
-• `/setbio <text>`*:* while replying, will save another user's bio
+ ◑ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
+◑ `/setbio <text>`*:* while replying, will save another user's bio
 Examples:
  `/bio @username(defaults to yours if not specified).`
  `/setbio This user is a wolf` (reply to the user)
 
 *Overall Information about you:*
- • `/info`*:* get information about a user.
+ ◑ `/info`*:* get information about a user.
 
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/OnePunchUpdates/192)
+ Come and see [HP System explained](https://t.me/grb_network)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
