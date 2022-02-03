@@ -1,9 +1,9 @@
 import html
 
-from SaitamaRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from SaitamaRobot.modules.log_channel import loggable
-from SaitamaRobot.modules.sql import reporting_sql as sql
+from SparrowRobot import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from SparrowRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from SparrowRobot.modules.log_channel import loggable
+from SparrowRobot.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
@@ -264,14 +264,14 @@ def buttons(update: Update, context: CallbackContext):
 
 
 __help__ = """
- • `/report <reason>`*:* reply to a message to report it to admins.
- • `@admin`*:* reply to a message to report it to admins.
+ ◑ `/report <reason>`*:* reply to a message to report it to admins.
+ ◑ `@admin`*:* reply to a message to report it to admins.
 *NOTE:* Neither of these will get triggered if used by admins.
 
 *Admins only:*
- • `/reports <on/off>`*:* change report setting, or view current status.
-   • If done in pm, toggles your status.
-   • If in group, toggles that groups's status.
+ ◑ `/reports <on/off>`*:* change report setting, or view current status.
+   ◑ If done in pm, toggles your status.
+   ◑ If in group, toggles that groups's status.
 """
 
 SETTING_HANDLER = CommandHandler("reports", report_setting)
